@@ -80,8 +80,9 @@ body>*{
 
 header{
 	width: 100%;
-	height: 515px;
+	/*height: 515px;*/
 	text-align: center;
+	position: relative;
 	@include box;
 	
 	.slider{
@@ -115,6 +116,8 @@ header{
 		left: -2px;
 	}
 
+/*MENU*/
+
 	.menuCover{
 		position: relative;
 		margin: 0 auto;
@@ -123,6 +126,7 @@ header{
 		border-left: 1px solid rgba(0,0,0,0);
 		border-right: 1px solid rgba(0,0,0,0);
 		border-top: 1px solid rgba(0,0,0,0);
+		
 	}
 
 .home{
@@ -136,20 +140,20 @@ header{
 		width: 47px;
 		border-bottom: 2px solid #edbfff;
 		@include textsh(0px, 0, 10px, rgba(0,0,0,0.6));
+
+
 	}
 
 
 .menuCover li{
 	border-left: 1px solid #051116;
 	border-right: 1px solid #051116;
+
 }
 
 	.menuCover:hover{
 		background: rgba(54,41,62,.9);
 		width: 144px;
-		
-		/*position: relative; 
-		margin: 0 auto; */
 		border-bottom: 1px solid #36283e;
 		border-radius: 8px 8px 0 0;
 		border-left: 1px solid #051116;
@@ -175,6 +179,7 @@ header{
 		display: none;
 	}
 	.subMenu li{
+		background: rgba(54,41,62,.9);
 		border-top: 1px solid #523f5a;
 		border-bottom: 1px solid #36283e;
 		border-left: 1px solid #051116;
@@ -191,7 +196,7 @@ header{
 		width: 144px;
 		padding: 0px 51px 1px 49px;
 		font-size: 24px;
-		background: rgba(54,41,62,.9);
+		
 		font-family: gotic;
 		color: #edbfff;
 		line-height: 38px;
@@ -199,11 +204,16 @@ header{
 		display: block;
 		border-bottom: 2px solid rgba(0,0,0,0);
 		@include textsh(0px, 0, 10px, rgba(0,0,0,0.6));
+
+		-webkit-transition: all .5s ease-in-out .2s;
+	    -moz-transition: all .5s ease-in-out .2s;
+	    -o-transition: all .5s ease-in-out .2s;
+	    transition: all .5s ease-in-out .2s;
 	}
 
 	
 }
-
+/*end MENU*/
 
 .pointer{
 	padding: 114px 0 0 65px;
@@ -285,9 +295,12 @@ header{
 	border-top: 1px solid #33253a;
 	border-bottom: 1px solid #33253a;
 	padding: 69px 27px 67px 10px;
+	z-index: 20;
+	position: relative;
 	/*margin: 0 0 20px 0;*/
 	@include grad(#745083, #322539);
 	@include box;
+	
 	
 }
 
@@ -345,8 +358,20 @@ header{
 		@include textsh( 0, 0, 8px, rgba(255,255,255,.8) );
 	}
 }
-.correct{
-	margin: 16px 0 0 0;
+.correct2{
+	margin: 14px 0 0 0;
+}
+
+.aboutComp::after{
+	content: '';
+	display: block;
+	width: 100%;
+	height: 1px;
+	background: #fff;
+	position: absolute;
+	bottom: -3px;
+	left: 0px;
+	@include boxsh( 0, 5px, 8px, rgba(0,0,0,.5));
 }
 
 
@@ -359,11 +384,12 @@ header{
 	background: #f9f9f9;
 	border-top: 1px solid #fff;
 	padding: 70px 0 0 0;
+	position: relative;
 }
 
 /*block1*/
 .block1Wrapper{
-	width: 255px;	
+	width: 79%;	
 	background: #fff;
 	margin: 0 2px 2px 44px;
 	padding: 23px 38px 27px 35px;
@@ -405,6 +431,9 @@ header{
 		letter-spacing: -.5px;
 		word-wrap: break-word;
 	}
+	p::after{
+		content: 'turpis neque, feu- giat eget eleifend et, lacinia non neque. Prae- sent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi conval- lis auctor. Nam vitae'
+	}
 }
 
 /*spotOverride*/
@@ -444,7 +473,7 @@ header{
 		margin: 50px 0 14px 17px;
 	}
 	article{
-		margin: 0 0 20px 0;
+		margin: 0 0 19px 0;
 		width: 100%;
 		position: relative;
 		@include box;
@@ -470,7 +499,6 @@ header{
 		float: right;
 		margin: 0 27px 88px 0;
 	}
-	
 
 }
 
@@ -482,14 +510,14 @@ header{
 }
 .block2img1{
 	position: absolute;
-	top: 2px;
+	top: 0px;
 	left: 19px;
 	background: url(../img/art1pic.png);
 }
 
 .block2img2{
 	position: absolute;
-	top: -1px;
+	top: 1px;
 	left: 19px;
 	background: url(../img/art2pic.png);
 }
@@ -509,6 +537,11 @@ header{
 	top: -1px;
 }
 
+.contentBlock2::after{
+	content: '';
+	display: block;
+	clear: both;
+}
 
 
 /*block3*/
@@ -516,11 +549,9 @@ header{
 .contentBlock3{
 	width: 100%;
 	border-top: 1px solid #fff;
-	padding: 21px 0 24px 0;
-	overflow: hidden;
+	padding: 21px 0 26px 0;
+	/*overflow: hidden;*/
 	@include box;
-	@include boxsh(0, 2px, 4px, rgba(0,0,0,.4));
-	z-index: 90;
 }
 .brands{
 	background: #f9f9f9;
@@ -602,12 +633,64 @@ header{
 }
 
 
-.clear{
-	content: " ";
+.contentBlock3::after{
+	content: '';
 	display: block;
 	clear: both;
 }
 
+
+
+/*additionalBlock*/
+
+.hidden480{
+	display: none;
+}
+
+.additionalBlock{
+	width: 100%;
+	padding: 80px 20px 87px 17px;
+	background: #ececec;
+	@include box;
+
+	.wrap{
+		width: 100%;
+		/*background: yellow;*/
+		h3{
+			font-size: 24px;
+			font-family: gotic;
+			color: #454545;
+			text-transform: uppercase;
+			letter-spacing: .2px;
+			margin: 0 0 9px 0;
+			@include textsh(1px, 1px, 0px, #fff);
+		}
+		p{
+			font-family: openSans;
+			color: #787878;
+			font-size: 16px;
+			font-weight: 300;
+			letter-spacing: -.5px;
+			line-height: 24px;
+			/*word-spacing: 1px;*/
+			margin: 0 0 55px 0;
+			@include textsh(1px, 1px, 0px, #fff);
+			span{
+				letter-spacing: -.4px;
+			}
+			.ls1{
+				letter-spacing: -.6px;	
+			}
+		}
+
+	}
+	.correct{
+		padding: 5px 0 0 0;
+	}
+	.lastWrap p{
+		margin: 0;
+	}
+}
 
 /*footer*/
 
@@ -615,6 +698,8 @@ footer{
 	width: 100%;
 	height: 201px;
 	background: url(../img/footerBG.jpg) center;
+	position: relative;
+	padding: 45px 0 0 0;
 	@include box;
 	z-index: 3;
 	p{
@@ -623,11 +708,335 @@ footer{
 		color: #fff;
 		font-weight: 300;
 		text-align: center;
-		padding: 43px 1px 0 0;
+		padding: 42px 1px 0 0;
 		letter-spacing: -.7px;
 		@include textsh(2px, 2px, 2px, rgba(0,0,0,.4));
 		span{
 			font-weight: 800;
 		}
 	}
+	
+	ul li{
+		display: inline-block;
+		margin: 0 0 0 21px;
+		a{
+			color: #fff;
+			font-family: gotic;
+			font-size: 20px;
+			text-transform: uppercase;
+			letter-spacing: -.3px;
+			@include textsh(2px, 2px, 2px, rgba(0,0,0,.4));
+		}
+		.cor1{
+			position: relative;
+			left: 0;
+		}
+		.cor2{
+			position: relative;
+			left: -2px;
+		}
+		.cor3{
+			position: relative;
+			left: -1px;
+		}
+		.cor4{
+			position: relative;
+			left: 0;
+		}
+		.cor5{
+			position: relative;
+			left: 2px;
+			letter-spacing: -.1px;
+		}
+		.cor6{
+			position: relative;
+			left: 1px;
+			letter-spacing: .1px;
+		}
+	}
+	
+
+}
+	footer::after{
+		content: '';
+		display: block;
+		width: 100%;
+		height: 1px;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		@include boxsh( 0, 5px, 8px, rgba(0,0,0,1));
+
+		
+	}
+
+
+
+
+
+
+
+
+/*media*/
+
+
+
+/*480*/
+
+@media screen and (min-device-width: 480px) {
+
+.wrapper{
+	width: 480px;
+}
+
+/*nav*/
+
+nav .menuCover{
+	background: rgba(54,41,62,.9);
+	width: 144px;
+	z-index: 5;
+	border-bottom: 1px solid #36283e;
+	border-radius: 8px 8px 0 0;
+	border-left: 1px solid #051116;
+	border-right: 1px solid #051116;
+	border-top: 1px solid #051116;
+	.subMenu{
+		display: block;
+		}
+	.home{
+		@include textsh(0,0,10px,rgba(255,255,255,.9));
+		position: relative;
+		top: 0;
+		left: -2px;
+	}
+
+	
+	.subMenuCor2,
+	.subMenuCor3{
+		position: relative;
+		top: 0;
+		left: -1px;
+	}
+	
+	.subMenuCor4{
+		letter-spacing: .3px;
+		position: relative;
+		top: -1px;
+		left: -1px;
+	}
+	.subMenuCor5{
+		letter-spacing: .3px;
+		position: relative;
+		top: -1px;
+		left: -1px;
+	}
+}
+header::after{
+	content: "";
+	width: 192px;
+	height: 304px;
+	background: url(../img/phone.png);
+	display: block;
+	position: absolute;
+	right: 32px;
+	top: 194px;
+	z-index: 0;
+}
+
+header::before{
+	content: "";
+	width: 100%;
+	height: 246px;
+	background: rgba(0,0,0,.2);
+	display: block;
+	position: absolute;
+	top: 203px;
+	z-index: 0;
+}
+
+/*pointer*/
+	.pointer{
+		padding: 114px 0 0 38px;
+	}
+	.pointerNext{
+		margin: 0 0 0 38px;
+	}
+
+/*spot*/
+	.sliderSpots {
+	    margin: 116px 0 0 7px;
+	}
+
+
+	header .slider{
+		padding: 0 0 60px 0 ;
+	}
+
+
+/*aboutComp*/
+	.aboutComp{
+		padding: 76px 27px 67px 10px;
+		p::after{
+			content: "ultrices posuere. Pel- lentesque vel lacus eget nisi convallis auctor. Nam";
+		}
+
+	.correct1{
+		margin: -1px 0 0 0;
+	}
+	.correct2{
+		margin: 25px 0 0 0;
+	}
+
+}
+
+/*content*/
+
+/*block1*/
+.block1Wrapper{
+	width: 87%;	
+	margin: -3px 2px 2px 44px;
+	padding: 28px 30px 34px 35px;
+	
+	h3{
+		font-size: 30px;
+		margin: 0 0 13px 0;
+		span{
+			display: inline;
+			
+		}
+	}
+	p{
+		padding: 0 0 0 2px;
+	}
+	p::after{
+		content: 'turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices po- suere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl."'
+	}
+}
+
+/*spotOverride*/
+
+.spotOverride{
+	margin: 22px 0 0 10px;		
+}
+
+
+/*block2*/
+.contentBlock2{
+	width: 73%;
+	margin: 0 auto;
+
+		h3{
+			margin: 50px 0 15px 17px;
+			letter-spacing: -.2px;
+		}
+		article{
+			margin: 0 0 19px 0;
+			width: 100%;
+			position: relative;
+			@include box;
+		}
+
+		p{
+			margin: 0 0 0 85px;
+		}
+		.light::after{
+			content: " 2012";
+			letter-spacing: -.3px;
+		}
+
+		.bold::after{
+			content: " feugiat eget";
+			letter-spacing: -.3px;
+		}
+		a{
+			margin: 3px -3px 89px 0;
+		}
+
+	}
+
+	.block2img1{
+		top: 0px;
+		left: 19px;
+	}
+
+	.block2img2{
+		top: 0px;
+		left: 20px;
+	}
+
+	.block2img3{
+		top: 1px;
+		left: 20px;
+	}
+
+	.art1
+	{
+		top: 1px;
+		left: -2px;
+	}
+	.art2{
+		top: 2px;
+		left: -2px;
+	}
+	.art3{
+		top: 1px;
+		left: -2px;
+	}
+
+
+
+/*block3*/
+/*brands*/
+	.contentBlock3{
+		padding: 12px 0 0px 0;
+	}
+	.brands{
+		width: 33%;
+		height: 109px;
+	}
+
+	.brand1{
+		left: 73px;
+	}
+
+	.brand2{
+		left: 8px;
+	}
+
+	.brand3{
+		left: -64px;
+	}
+
+	.brand4{
+		left: 14px;
+		top: -34px;
+	}
+
+	.brand5{
+		left: -24px;
+		/*top: -34px;*/
+	}
+
+	.brand6{
+		/*top: -36px;*/
+		left: -45px;
+	}
+
+/*footer*/
+	footer{
+		p{
+			padding: 37px 3px 0 0;
+		}
+	}
+	
+
+/*footer nav	*/
+/*additionalBlock*/
+	.hidden480{
+		display: block;
+	}
+
+
+
+	
 }
