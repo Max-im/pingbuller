@@ -84,6 +84,10 @@ body > * {
   margin: 0 auto;
 }
 
+.hidden960 {
+  display: none;
+}
+
 header {
   width: 100%;
   /*height: 515px;*/
@@ -471,6 +475,10 @@ header .subMenu > li a {
 }
 
 /*block1*/
+.contentBlock1 {
+  width: 100%;
+}
+
 .block1Wrapper {
   width: 79%;
   background: #fff;
@@ -1001,6 +1009,9 @@ footer::after {
   .aboutComp {
     padding: 76px 27px 67px 10px;
   }
+  .aboutComp .aboutCompWrap {
+    width: 100%;
+  }
   .aboutComp p::after {
     content: "ultrices posuere. Pel- lentesque vel lacus eget nisi convallis auctor. Nam";
   }
@@ -1013,6 +1024,10 @@ footer::after {
 
   /*content*/
   /*block1*/
+  .contentBlock1 {
+    width: 100%;
+  }
+
   .block1Wrapper {
     width: 87%;
     margin: -3px 2px 2px 44px;
@@ -1039,7 +1054,7 @@ footer::after {
 
   /*block2*/
   .contentBlock2 {
-    width: 73%;
+    width: 100%;
     margin: 0 auto;
   }
   .contentBlock2 h3 {
@@ -1159,6 +1174,10 @@ footer::after {
     width: 768px;
   }
 
+  .hidden960 {
+    display: none;
+  }
+
   /*head*/
   header {
     text-align: center;
@@ -1261,201 +1280,201 @@ footer::after {
     top: 243px;
     z-index: 0;
   }
-}
-/*aboutComp*/
-.aboutComp {
-  height: 341px;
-  padding: 69px 0px 67px 0px;
-}
-.aboutComp .aboutCompWrap {
-  width: 33%;
-  float: left;
-  position: relative;
-  margin: 7px 0 0px 0;
-  padding: 0 6px 0 10px;
-}
-.aboutComp .aboutCompWrap p {
-  height: 141px;
-  overflow: hidden;
-}
-.aboutComp .aboutCompWrap .wrenchImg {
-  left: 31px;
-}
-.aboutComp .aboutCompWrap a {
-  line-height: 16px;
-  margin: 0 19px 0 0;
-}
-.aboutComp .correct1 {
-  padding: 0 6px 0 8px;
-}
-.aboutComp .correct1 a {
-  margin: 0 21px 0 0;
-}
-.aboutComp .correct2 {
-  padding: 0 0px 0 16px;
-}
-.aboutComp .correct2 .wrenchImg {
-  left: 38px;
-}
-.aboutComp .correct2 a {
-  margin: 0 19px 0 0;
-}
 
-/*content*/
-.contentBlock1 {
-  width: 50%;
-  margin: 0;
-  float: left;
-  border-bottom: 1px solid #e6e6e6;
-}
-.contentBlock1 .block1Wrapper {
-  width: 81%;
-  margin: 28px 2px 2px 43px;
-  padding: 29px 20px 42px 35px;
-}
-.contentBlock1 .block1Wrapper .photo {
-  top: 18px;
-}
-.contentBlock1 .block1Wrapper h3 {
-  font-size: 24px;
-  margin: 0 0 9px 5px;
-}
-.contentBlock1 .block1Wrapper h3 span {
-  display: block;
-  margin: 0 0 8px 0;
-}
-.contentBlock1 .block1Wrapper p {
-  letter-spacing: -.47px;
-}
-.contentBlock1 .block1Wrapper p::after {
-  content: "turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar";
-}
-.contentBlock1 .spotOverride {
-  margin: 24px 0 73px 15px;
-}
+  /*aboutComp*/
+  .aboutComp {
+    height: 341px;
+    padding: 69px 0px 67px 0px;
+  }
+  .aboutComp .aboutCompWrap {
+    width: 33%;
+    float: left;
+    position: relative;
+    margin: 7px 0 0px 0;
+    padding: 0 6px 0 10px;
+  }
+  .aboutComp .aboutCompWrap p {
+    height: 141px;
+    overflow: hidden;
+  }
+  .aboutComp .aboutCompWrap .wrenchImg {
+    left: 31px;
+  }
+  .aboutComp .aboutCompWrap a {
+    line-height: 16px;
+    margin: 0 19px 0 0;
+  }
+  .aboutComp .correct1 {
+    padding: 0 6px 0 8px;
+  }
+  .aboutComp .correct1 a {
+    margin: 0 21px 0 0;
+  }
+  .aboutComp .correct2 {
+    padding: 0 0px 0 16px;
+  }
+  .aboutComp .correct2 .wrenchImg {
+    left: 38px;
+  }
+  .aboutComp .correct2 a {
+    margin: 0 19px 0 0;
+  }
 
-/*block2*/
-.contentBlock2 {
-  width: 50%;
-  margin: 0;
-  float: left;
-  padding: 8px 0 0 13px;
-}
-.contentBlock2 a {
-  margin: 3px 28px 89px 0;
-}
+  /*content*/
+  .contentBlock1 {
+    width: 50%;
+    margin: 0;
+    float: left;
+    border-bottom: 1px solid #e6e6e6;
+  }
+  .contentBlock1 .block1Wrapper {
+    width: 81%;
+    margin: 28px 2px 2px 43px;
+    padding: 29px 20px 42px 35px;
+  }
+  .contentBlock1 .block1Wrapper .photo {
+    top: 18px;
+  }
+  .contentBlock1 .block1Wrapper h3 {
+    font-size: 24px;
+    margin: 0 0 9px 5px;
+  }
+  .contentBlock1 .block1Wrapper h3 span {
+    display: block;
+    margin: 0 0 8px 0;
+  }
+  .contentBlock1 .block1Wrapper p {
+    letter-spacing: -.47px;
+  }
+  .contentBlock1 .block1Wrapper p::after {
+    content: "turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar";
+  }
+  .contentBlock1 .spotOverride {
+    margin: 24px 0 73px 15px;
+  }
 
-/*block3*/
-.contentBlock3 {
-  border-top: 1px solid #fff;
-  padding: 12px 0 26px 0;
-}
-.contentBlock3 .brands {
-  width: 16%;
-  height: 95px;
-}
-.contentBlock3 .brand1 {
-  left: -11px;
-  top: 21px;
-}
-.contentBlock3 .brand2 {
-  left: -7px;
-  top: 21px;
-}
-.contentBlock3 .brand3 {
-  left: -5px;
-  top: 21px;
-}
-.contentBlock3 .brand4 {
-  left: -18px;
-  top: 24px;
-}
-.contentBlock3 .brand5 {
-  left: 16px;
-  top: 22px;
-}
-.contentBlock3 .brand6 {
-  top: 23px;
-  left: 54px;
-}
+  /*block2*/
+  .contentBlock2 {
+    width: 50%;
+    margin: 0;
+    float: left;
+    padding: 8px 0 0 13px;
+  }
+  .contentBlock2 a {
+    margin: 3px 28px 89px 0;
+  }
 
-/*additionalBlock*/
-.additionalBlock {
-  padding: 100px 20px 0px 19px;
-}
-.additionalBlock .wrap {
-  width: 27%;
-  float: left;
-  margin: 0 69px 33px 0;
-}
-.additionalBlock .wrap h3 {
-  margin: 2px 0 10px 0;
-}
-.additionalBlock .wrap p {
-  word-break: break-all;
-  height: 173px;
-  overflow: hidden;
-  /*word-wrap: normal | break-word | inherit */
-  /*word-wrap: break-word;*/
-  	/*-webkit-hyphens: auto;
-      -moz-hyphens: auto;
-      -ms-hyphens: auto;
-  	hyphens: auto;*/
-}
-.additionalBlock .lastWrap {
-  margin: 0 0 0 -2px;
-}
-.additionalBlock .correct {
-  padding: 0;
-}
+  /*block3*/
+  .contentBlock3 {
+    border-top: 1px solid #fff;
+    padding: 12px 0 26px 0;
+  }
+  .contentBlock3 .brands {
+    width: 16%;
+    height: 95px;
+  }
+  .contentBlock3 .brand1 {
+    left: -11px;
+    top: 21px;
+  }
+  .contentBlock3 .brand2 {
+    left: -7px;
+    top: 21px;
+  }
+  .contentBlock3 .brand3 {
+    left: -5px;
+    top: 21px;
+  }
+  .contentBlock3 .brand4 {
+    left: -18px;
+    top: 24px;
+  }
+  .contentBlock3 .brand5 {
+    left: 16px;
+    top: 22px;
+  }
+  .contentBlock3 .brand6 {
+    top: 23px;
+    left: 54px;
+  }
 
-.additionalBlock::after {
-  content: "";
-  display: block;
-  clear: both;
-}
+  /*additionalBlock*/
+  .additionalBlock {
+    padding: 100px 20px 0px 19px;
+  }
+  .additionalBlock .wrap {
+    width: 27%;
+    float: left;
+    margin: 0 69px 33px 0;
+  }
+  .additionalBlock .wrap h3 {
+    margin: 2px 0 10px 0;
+  }
+  .additionalBlock .wrap p {
+    word-break: break-all;
+    height: 173px;
+    overflow: hidden;
+    /*word-wrap: normal | break-word | inherit */
+    /*word-wrap: break-word;*/
+    	/*-webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+    	hyphens: auto;*/
+  }
+  .additionalBlock .lastWrap {
+    margin: 0 0 0 -2px;
+  }
+  .additionalBlock .correct {
+    padding: 0;
+  }
 
-/*footer*/
-footer {
-  padding: 45px 20px 0 18px;
-}
-footer ul li {
-  margin: 0 40px 0 0;
-}
-footer ul li .cor1 {
-  position: relative;
-  left: 0;
-}
-footer ul li .cor2 {
-  position: relative;
-  left: -1px;
-}
-footer ul li .cor3 {
-  position: relative;
-  left: -2px;
-}
-footer ul li .cor4 {
-  position: relative;
-  left: 0;
-}
-footer ul li .cor5 {
-  position: relative;
-  left: 1px;
-  letter-spacing: -.1px;
-}
-footer ul li .cor6 {
-  position: relative;
-  left: 0px;
-  letter-spacing: .1px;
-}
-footer p {
-  text-align: right;
-}
+  .additionalBlock::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
 
-.hidden768 {
-  display: block;
-}
+  /*footer*/
+  footer {
+    padding: 45px 20px 0 18px;
+  }
+  footer ul li {
+    margin: 0 40px 0 0;
+  }
+  footer ul li .cor1 {
+    position: relative;
+    left: 0;
+  }
+  footer ul li .cor2 {
+    position: relative;
+    left: -1px;
+  }
+  footer ul li .cor3 {
+    position: relative;
+    left: -2px;
+  }
+  footer ul li .cor4 {
+    position: relative;
+    left: 0;
+  }
+  footer ul li .cor5 {
+    position: relative;
+    left: 1px;
+    letter-spacing: -.1px;
+  }
+  footer ul li .cor6 {
+    position: relative;
+    left: 0px;
+    letter-spacing: .1px;
+  }
+  footer p {
+    text-align: right;
+  }
 
+  .hidden768 {
+    display: block;
+  }
+}
 /*media 960*/
 @media screen and (min-device-width: 960px) {
   .wrapper {
@@ -1852,7 +1871,8 @@ footer p {
     left: 0px;
     letter-spacing: .1px;
   }
-  footer .hidden960 {
-    display: none;
+
+  .hidden960 {
+    display: block;
   }
 }

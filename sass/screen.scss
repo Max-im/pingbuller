@@ -78,6 +78,11 @@ body>*{
 	margin: 0 auto;
 }
 
+
+.hidden960	{
+	display: none;
+}
+
 header{
 	width: 100%;
 	/*height: 515px;*/
@@ -425,6 +430,10 @@ header{
 }
 
 /*block1*/
+
+.contentBlock1{
+	width: 100%;
+}
 .block1Wrapper{
 	width: 79%;	
 	background: #fff;
@@ -918,6 +927,9 @@ header::before{
 /*aboutComp*/
 	.aboutComp{
 		padding: 76px 27px 67px 10px;
+		.aboutCompWrap{
+			width: 100%;
+		}
 		p::after{
 			content: "ultrices posuere. Pel- lentesque vel lacus eget nisi convallis auctor. Nam";
 		}
@@ -934,6 +946,10 @@ header::before{
 /*content*/
 
 /*block1*/
+
+.contentBlock1{
+	width: 100%;
+}
 .block1Wrapper{
 	width: 87%;	
 	margin: -3px 2px 2px 44px;
@@ -964,7 +980,7 @@ header::before{
 
 /*block2*/
 .contentBlock2{
-	width: 73%;
+	width: 100%;
 	margin: 0 auto;
 
 		h3{
@@ -1095,6 +1111,9 @@ header::before{
 		width: 768px;
 	}
 
+	.hidden960	{
+		display: none;
+	}
 	/*head*/
 	header{
 	text-align: center;
@@ -1182,9 +1201,7 @@ header::before{
 			text-align: center;
 		    margin: 149px 0 32px 397px;
 		}
-
-
-		}
+	}
 		header::after{
 			content: "";
 			width: 274px;
@@ -1207,9 +1224,9 @@ header::before{
 			top: 243px;
 			z-index: 0;
 		}
-	}
+	
 
-/*aboutComp*/
+	/*aboutComp*/
 	.aboutComp{
 		height: 341px;
 		padding: 69px 0px 67px 0px;
@@ -1248,7 +1265,7 @@ header::before{
 		}
 	}
 
-/*content*/
+	/*content*/
 	.contentBlock1{
 		width: 50%;
 		margin: 0;
@@ -1428,14 +1445,16 @@ header::before{
 		p{
 			text-align: right;
 		}
+
 	}	
 
 .hidden768{
 	display: block;
 
+
+
 }
-
-
+}
 
 
 
@@ -1469,8 +1488,6 @@ header::before{
 		nav{
 			float: right;
 			margin: 62px -50px 0 0;
-			
-
 		}
 
 		.slider>ul>li:hover{
@@ -1483,17 +1500,18 @@ header::before{
 			font-size: 60px;
 			line-height: 60px;
 		}
+
 		.pointerNext{
 			font-size: 32px;
 			line-height: 32px;
 			margin: -1px 0 -78px 1px;
 			letter-spacing: -.1px;
 		}	
+
 		.pointerNext::after{
 			content: " true";
 		}
 
-		
 		.addP{
 			width: 520px;		
 			font-size: 18px;
@@ -1508,7 +1526,6 @@ header::before{
 			display: block;	
 			z-index: 15;
 		}
-
 
 		.addP::after{
 			content: "tibulum sit amet sapien. Nunc dignissim tincidunt est, et auctor turpis ornare a. Nam venenatis hendrerit est at volutpat. Morbi elementum euismod lacus id semper. In odio nunc, imperdiet eget aliquam quis, euismod id lectus. Nulla interdum arcu et felis aliquam a tempus lectus lobortis.";
@@ -1535,8 +1552,6 @@ header::before{
 			text-align: center;
 		    margin: 173px 0 -9px 547px;
 		}
-
-
 	}
 
 	header::after{
@@ -1549,7 +1564,7 @@ header::before{
 		z-index: 0;
 	}
 	
-/*aboutComp*/
+	/*aboutComp*/
 
 	.aboutComp{
 		height: 341px;
@@ -1592,7 +1607,6 @@ header::before{
 				left: 26px;
 				top: 11px;
 			}
-
 		}
 
 		.correct2{
@@ -1621,7 +1635,7 @@ header::before{
 	}
 
 
-/*content*/
+	/*content*/
 
 	.contentBlock1{
 		.block1Wrapper{
@@ -1705,10 +1719,9 @@ header::before{
 		.hidden960{
 			display: block;
 		}
-
-
 	}
 
+	
 
 /*block3*/
 
@@ -1823,58 +1836,50 @@ header::before{
 		}
 	}
 
-/*footer*/
+	/*footer*/
 
-footer{
+	footer{
 	height: 113px;
 	padding: 45px 0 0 0;
-	p{
-		margin: -11px 0 0 0;
-		padding: 0px 1px 0 0;
-		letter-spacing: -.8px;
-	}
+		p{
+			margin: -11px 0 0 0;
+			padding: 0px 1px 0 0;
+			letter-spacing: -.8px;
+		}
 	
-	ul li{
-		display: inline-block;
-		margin: 0 40px 0 0;
-		
-		.cor1{
-			position: relative;
-			left: 0;
-		}
-		.cor2{
-			position: relative;
-			left: -1px;
-		}
-		.cor3{
-			position: relative;
-			left: -2px;
-		}
-		.cor4{
-			position: relative;
-			left: 0;
-		}
-		.cor5{
-			position: relative;
-			left: 1px;
-			letter-spacing: -.1px;
-		}
-		.cor6{
-			position: relative;
-			left: 0px;
-			letter-spacing: .1px;
+		ul li{
+			display: inline-block;
+			margin: 0 40px 0 0;
+			
+			.cor1{
+				position: relative;
+				left: 0;
+			}
+			.cor2{
+				position: relative;
+				left: -1px;
+			}
+			.cor3{
+				position: relative;
+				left: -2px;
+			}
+			.cor4{
+				position: relative;
+				left: 0;
+			}
+			.cor5{
+				position: relative;
+				left: 1px;
+				letter-spacing: -.1px;
+			}
+			.cor6{
+				position: relative;
+				left: 0px;
+				letter-spacing: .1px;
+			}
 		}
 	}
-
-
-
-
-	.hidden960	{
-		display: none;
-	}
-
-}
-
-
-	
+	.hidden960{
+			display: block;
+		}
 }
