@@ -80,7 +80,8 @@ body > * {
 }
 
 .wrapper {
-  width: 320px;
+  min-width: 320px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -88,11 +89,19 @@ body > * {
   display: none;
 }
 
+.mediaWidth {
+  width: 320px;
+  margin: 0 auto;
+  position: relative;
+}
+
 header {
   width: 100%;
   /*height: 515px;*/
   text-align: center;
-  position: relative;
+  /*position: relative;*/
+  background: url(../img/bg.jpg) top center;
+  background-size: cover;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -o-box-sizing: border-box;
@@ -104,7 +113,6 @@ header {
   /*MENU*/
 }
 header .slider {
-  background: url(../img/bg.jpg) top center;
   padding: 0 0 68px 0;
 }
 header h2 {
@@ -828,6 +836,7 @@ footer {
   width: 100%;
   height: 201px;
   background: url(../img/footerBG.jpg) center;
+  background-size: cover;
   position: relative;
   padding: 45px 0 0 0;
   -moz-box-sizing: border-box;
@@ -919,7 +928,12 @@ footer::after {
 /*480*/
 @media screen and (min-device-width: 480px) {
   .wrapper {
+    width: 100%;
+  }
+
+  .mediaWidth {
     width: 480px;
+    margin: 0 auto;
   }
 
   /*nav*/
@@ -964,7 +978,7 @@ footer::after {
     left: -1px;
   }
 
-  header::after {
+  header .mediaWidth::after {
     content: "";
     width: 192px;
     height: 304px;
@@ -1171,7 +1185,12 @@ footer::after {
 /*media 768*/
 @media screen and (min-device-width: 768px) {
   .wrapper {
+    width: 100%;
+  }
+
+  .mediaWidth {
     width: 768px;
+    margin: 0 auto;
   }
 
   .hidden960 {
@@ -1258,7 +1277,7 @@ footer::after {
     margin: 149px 0 32px 397px;
   }
 
-  header::after {
+  header .mediaWidth::after {
     content: "";
     width: 274px;
     height: 434px;
@@ -1478,7 +1497,13 @@ footer::after {
 /*media 960*/
 @media screen and (min-device-width: 960px) {
   .wrapper {
+    width: 100%;
+  }
+
+  .mediaWidth {
     width: 960px;
+    margin: 0 auto;
+    position: relative;
   }
 
   /*head*/
@@ -1486,18 +1511,43 @@ footer::after {
     /*MENU*/
   }
   header .slider {
+    width: 960px;
+    /*margin: 0 auto;*/
     padding: 0 0 68px 0;
     text-align: left;
   }
   header h2 {
-    left: -1px;
+    left: 0px;
   }
   header .textER {
-    left: -5px;
+    left: -2px;
   }
   header nav {
     float: right;
-    margin: 62px -50px 0 0;
+    margin: 63px -50px 0 0;
+  }
+  header nav .menuCover .home {
+    position: relative;
+    left: 3px;
+  }
+  header nav .subMenu .subMenuCor1 {
+    left: 2px;
+  }
+  header nav .subMenu .subMenuCor2 {
+    left: 3px;
+  }
+  header nav .subMenu .subMenuCor3 {
+    left: 1px;
+  }
+  header nav .subMenu .subMenuCor4 {
+    letter-spacing: 0px;
+    position: relative;
+    top: -1px;
+    left: -1px;
+  }
+  header nav .subMenu .subMenuCor5 {
+    letter-spacing: 0px;
+    left: -1px;
   }
   header .slider > ul > li:hover {
     border-bottom: 3px solid #edbfff;
@@ -1512,7 +1562,7 @@ footer::after {
     font-size: 32px;
     line-height: 32px;
     margin: -1px 0 -78px 1px;
-    letter-spacing: -.1px;
+    letter-spacing: -.3px;
   }
   header .pointerNext::after {
     content: " true";
@@ -1554,7 +1604,7 @@ footer::after {
     margin: 173px 0 -9px 547px;
   }
 
-  header::after {
+  header .mediaWidth::after {
     right: 70px;
     top: 261px;
   }
@@ -1575,11 +1625,11 @@ footer::after {
   }
   .aboutComp .aboutCompWrap h3 {
     font-size: 30px;
-    letter-spacing: -.4px;
+    letter-spacing: -.3px;
   }
   .aboutComp .aboutCompWrap p {
     font-size: 16px;
-    height: 141px;
+    height: 140px;
     overflow: hidden;
     margin: 7px 0 0px 69px;
   }
@@ -1588,8 +1638,20 @@ footer::after {
     top: 8px;
   }
   .aboutComp .aboutCompWrap a {
+    font-size: 18px;
+    letter-spacing: 0.3px;
     line-height: 16px;
     margin: 0 20px 0 0;
+    position: relative;
+  }
+  .aboutComp .aboutCompWrap .cor1 {
+    left: -2px;
+  }
+  .aboutComp .aboutCompWrap .cor2 {
+    left: -1px;
+  }
+  .aboutComp .aboutCompWrap .cor3 {
+    left: -1px;
   }
   .aboutComp .correct1 {
     padding: 0 6px 0 8px;
@@ -1673,6 +1735,7 @@ footer::after {
   /*block2*/
   .contentBlock2 h3 {
     margin: 49px 0 14px 18px;
+    letter-spacing: 0px;
   }
   .contentBlock2 article {
     margin: 0 0 18px 0;
@@ -1680,23 +1743,30 @@ footer::after {
   .contentBlock2 article .bold {
     letter-spacing: -.5px;
   }
+  .contentBlock2 article .bold::after {
+    letter-spacing: -.1px;
+  }
   .contentBlock2 article .light {
     margin: 0 0 0 86px;
   }
+  .contentBlock2 article .last {
+    line-height: 22px;
+  }
   .contentBlock2 a {
-    margin: 6px 20px 91px 0;
+    margin: 6px 21px 92px 0;
+    letter-spacing: 0.3px;
   }
   .contentBlock2 .art1 .light::after {
     content: " 2012 in Recent News";
-    letter-spacing: -0.5px;
+    letter-spacing: -0.2px;
   }
   .contentBlock2 .art2 .light::after {
     content: " 2012 in Category";
-    letter-spacing: -0.5px;
+    letter-spacing: -0.2px;
   }
   .contentBlock2 .art3 .light::after {
     content: " 2012 in Blog Updates";
-    letter-spacing: -0.5px;
+    letter-spacing: -0.2px;
   }
   .contentBlock2 .del960 {
     display: none;
@@ -1740,7 +1810,7 @@ footer::after {
 
   /*additionalBlock*/
   .additionalBlock {
-    padding: 92px 0px 0px 0px;
+    padding: 91px 0px 0px 0px;
   }
   .additionalBlock .wrap {
     margin: 0 60px 33px 0;
@@ -1802,8 +1872,8 @@ footer::after {
     font-size: 30px;
     font-family: gotic;
     color: #454545;
-    letter-spacing: -.2px;
-    margin: 2px 0 8px 0;
+    letter-spacing: 0px;
+    margin: 3px 0 8px -1px;
     padding: 2px 0 0 1px;
     -moz-text-shadow: 1px 0px 0px #fff;
     -webkit-text-shadow: 1px 0px 0px #fff;
@@ -1818,7 +1888,7 @@ footer::after {
     font-size: 30px;
     font-family: gotic;
     color: #454545;
-    letter-spacing: -.1px;
+    letter-spacing: .2px;
     margin: 2px 0 8px 0;
     padding: 2px 0 0 1px;
     -moz-text-shadow: 1px 0px 0px #fff;
@@ -1834,11 +1904,11 @@ footer::after {
   /*footer*/
   footer {
     height: 113px;
-    padding: 45px 0 0 0;
+    padding: 47px 0 0 0;
   }
   footer p {
-    margin: -11px 0 0 0;
-    padding: 0px 1px 0 0;
+    margin: -12px 0 0 0;
+    padding: 0px 0px 0 0;
     letter-spacing: -.8px;
   }
   footer ul li {
@@ -1855,7 +1925,7 @@ footer::after {
   }
   footer ul li .cor3 {
     position: relative;
-    left: -2px;
+    left: 0px;
   }
   footer ul li .cor4 {
     position: relative;
@@ -1863,12 +1933,12 @@ footer::after {
   }
   footer ul li .cor5 {
     position: relative;
-    left: 1px;
+    left: 0px;
     letter-spacing: -.1px;
   }
   footer ul li .cor6 {
     position: relative;
-    left: 0px;
+    left: -2px;
     letter-spacing: .1px;
   }
 
