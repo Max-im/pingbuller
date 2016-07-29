@@ -76,7 +76,7 @@ body>*{
 .wrapper{
 	min-width: 320px;
 	width: 100%;
-	overflow: hidden;
+	/*overflow: hidden;*/
 }
 
 
@@ -846,7 +846,7 @@ footer{
 
 /*480*/
 
-@media screen and (min-device-width: 480px) {
+@media screen and (min-width: 480px) {
 
 	.wrapper{
 		width: 100%;
@@ -857,72 +857,71 @@ footer{
 		width: 480px;
 		margin: 0 auto;
 	}
-/*nav*/
+	/*nav*/
 
-nav .menuCover{
-	background: rgba(54,41,62,.9);
-	width: 144px;
-	z-index: 5;
-	border-bottom: 1px solid #36283e;
-	border-radius: 8px 8px 0 0;
-	border-left: 1px solid #051116;
-	border-right: 1px solid #051116;
-	border-top: 1px solid #051116;
-	.subMenu{
-		display: block;
+	nav .menuCover{
+		background: rgba(54,41,62,.9);
+		width: 144px;
+		z-index: 5;
+		border-bottom: 1px solid #36283e;
+		border-radius: 8px 8px 0 0;
+		border-left: 1px solid #051116;
+		border-right: 1px solid #051116;
+		border-top: 1px solid #051116;
+		.subMenu{
+			display: block;
 		}
-	.home{
-		@include textsh(0,0,10px,rgba(255,255,255,.9));
-		position: relative;
-		top: 0;
-		left: -2px;
-	}
-
+		.home{
+			@include textsh(0,0,10px,rgba(255,255,255,.9));
+			position: relative;
+			top: 0;
+			left: -2px;
+		}
 	
-	.subMenuCor2,
-	.subMenuCor3{
-		position: relative;
-		top: 0;
-		left: -1px;
-	}
+		.subMenuCor2,
+		.subMenuCor3{
+			position: relative;
+			top: 0;
+			left: -1px;
+		}
 	
-	.subMenuCor4{
-		letter-spacing: .3px;
-		position: relative;
-		top: -1px;
-		left: -1px;
+		.subMenuCor4{
+			letter-spacing: .3px;
+			position: relative;
+			top: -1px;
+			left: -1px;
+		}
+		.subMenuCor5{
+			letter-spacing: .3px;
+			position: relative;
+			top: -1px;
+			left: -1px;
+		}
 	}
-	.subMenuCor5{
-		letter-spacing: .3px;
-		position: relative;
-		top: -1px;
-		left: -1px;
+	header .mediaWidth::after{
+		content: "";
+		width: 192px;
+		height: 304px;
+		background: url(../img/phone.png);
+		display: block;
+		position: absolute;
+		right: 32px;
+		top: 194px;
+		z-index: 0;
 	}
-}
-header .mediaWidth::after{
-	content: "";
-	width: 192px;
-	height: 304px;
-	background: url(../img/phone.png);
-	display: block;
-	position: absolute;
-	right: 32px;
-	top: 194px;
-	z-index: 0;
-}
 
-header::before{
-	content: "";
-	width: 100%;
-	height: 246px;
-	background: rgba(0,0,0,.2);
-	display: block;
-	position: absolute;
-	top: 203px;
-	z-index: 0;
-}
+	header::before{
+		content: "";
+		width: 100%;
+		height: 246px;
+		background: rgba(0,0,0,.2);
+		display: block;
+		position: absolute;
+		top: 203px;
+		z-index: 0;
+	}
 
-/*pointer*/
+	/*pointer*/
 	.pointer{
 		padding: 114px 0 0 38px;
 	}
@@ -930,7 +929,7 @@ header::before{
 		margin: 0 0 0 38px;
 	}
 
-/*spot*/
+	/*spot*/
 	.sliderSpots {
 	    margin: 116px 0 0 7px;
 	}
@@ -941,7 +940,7 @@ header::before{
 	}
 
 
-/*aboutComp*/
+	/*aboutComp*/
 	.aboutComp{
 		padding: 76px 27px 67px 10px;
 		.aboutCompWrap{
@@ -950,55 +949,53 @@ header::before{
 		p::after{
 			content: "ultrices posuere. Pel- lentesque vel lacus eget nisi convallis auctor. Nam";
 		}
-
-	.correct1{
-		margin: -1px 0 0 0;
-	}
-	.correct2{
-		margin: 25px 0 0 0;
-	}
-
-}
-
-/*content*/
-
-/*block1*/
-
-.contentBlock1{
-	width: 100%;
-}
-.block1Wrapper{
-	width: 87%;	
-	margin: -3px 2px 2px 44px;
-	padding: 28px 30px 34px 35px;
-	
-	h3{
-		font-size: 30px;
-		margin: 0 0 13px 0;
-		span{
-			display: inline;
-			
+		.correct1{
+			margin: -1px 0 0 0;
+		}
+		.correct2{
+			margin: 25px 0 0 0;
 		}
 	}
-	p{
-		padding: 0 0 0 2px;
+
+	/*content*/
+
+	/*block1*/
+
+	.contentBlock1{
+		width: 100%;
 	}
-	p::after{
-		content: 'turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices po- suere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl."'
+	
+	.block1Wrapper{
+		width: 87%;	
+		margin: -3px 2px 2px 44px;
+		padding: 28px 30px 34px 35px;
+		
+		h3{
+			font-size: 30px;
+			margin: 0 0 13px 0;
+			span{
+				display: inline;
+			}
+		}
+		p{
+			padding: 0 0 0 2px;
+		}
+		p::after{
+			content: 'turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices po- suere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl."'
+		}
 	}
-}
 
-/*spotOverride*/
+	/*spotOverride*/
 
-.spotOverride{
-	margin: 22px 0 0 10px;		
-}
+	.spotOverride{
+		margin: 22px 0 0 10px;		
+	}
 
 
-/*block2*/
-.contentBlock2{
-	width: 100%;
-	margin: 0 auto;
+	/*block2*/
+	.contentBlock2{
+		width: 100%;
+		margin: 0 auto;
 
 		h3{
 			margin: 50px 0 15px 17px;
@@ -1026,7 +1023,6 @@ header::before{
 		a{
 			margin: 3px -3px 89px 0;
 		}
-
 	}
 
 	.block2img1{
@@ -1044,8 +1040,7 @@ header::before{
 		left: 20px;
 	}
 
-	.art1
-	{
+	.art1{
 		top: 1px;
 		left: -2px;
 	}
@@ -1059,9 +1054,8 @@ header::before{
 	}
 
 
-
-/*block3*/
-/*brands*/
+	/*block3*/
+	/*brands*/
 	.contentBlock3{
 		padding: 12px 0 0px 0;
 	}
@@ -1097,7 +1091,7 @@ header::before{
 		left: -45px;
 	}
 
-/*footer*/
+	/*footer*/
 	footer{
 		p{
 			padding: 37px 3px 0 0;
@@ -1105,8 +1099,8 @@ header::before{
 	}
 	
 
-/*footer nav	*/
-/*additionalBlock*/
+	/*footer nav	*/
+	/*additionalBlock*/
 	.hidden480{
 		display: block;
 	}
@@ -1123,7 +1117,7 @@ header::before{
 /*media 768*/
 
 
-@media screen and (min-device-width: 768px) {
+@media screen and (min-width: 768px){
 	.wrapper{
 		width: 100%;
 	}
@@ -1133,7 +1127,7 @@ header::before{
 		margin: 0 auto;
 	}
 
-	.hidden960	{
+	.hidden960{
 		display: none;
 	}
 	/*head*/
@@ -1152,9 +1146,7 @@ header::before{
 			left: 15px;
 		}
 
-
 		/*MENU*/
-
 		.menuCover,
 		.home,
 		.subMenu,
@@ -1483,7 +1475,7 @@ header::before{
 
 
 /*media 960*/
-@media screen and (min-device-width: 960px) {
+@media screen and (min-width: 960px) {
 
 	.wrapper{
 		width: 100%;
@@ -1491,8 +1483,7 @@ header::before{
 
 	.mediaWidth{
 		width: 960px;
-		margin: 0 auto;
-		position: relative;
+		
 	}
 
 	/*head*/
