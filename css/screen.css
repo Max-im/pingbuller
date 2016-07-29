@@ -1510,7 +1510,7 @@ footer::after {
   }
   header .slider {
     width: 960px;
-    /*margin: 0 auto;*/
+    margin: 0 0 0 0;
     padding: 0 0 68px 0;
     text-align: left;
   }
@@ -1522,11 +1522,14 @@ footer::after {
   }
   header nav {
     float: right;
-    margin: 63px -50px 0 0;
+    margin: 63px 0px 0 0;
   }
   header nav .menuCover .home {
     position: relative;
     left: 3px;
+  }
+  header nav .subMenu .l-ch {
+    margin: 0 0 0 0;
   }
   header nav .subMenu .subMenuCor1 {
     left: 2px;

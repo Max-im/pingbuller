@@ -1491,9 +1491,10 @@ footer{
 		
 		.slider{
 			width: 960px;
-			/*margin: 0 auto;*/
+			margin: 0 0 0 0;
 			padding: 0 0 68px 0;
 			text-align: left;
+
 		}
 
 		h2{
@@ -1508,12 +1509,15 @@ footer{
 
 		nav{
 			float: right;
-			margin: 63px -50px 0 0;
+			margin: 63px 0px 0 0;
 			.menuCover .home{
 				position: relative;
 				left: 3px;
 			}
 		.subMenu{
+			.l-ch{
+				margin: 0 0 0 0;
+			}
 			.subMenuCor1{
 				left: 2px;
 			}
