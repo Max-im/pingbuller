@@ -88,6 +88,7 @@ body>*{
 	width: 320px;
 	margin: 0 auto;
 	position: relative;
+	overflow: hidden;
 }
 
 header{
@@ -855,7 +856,8 @@ footer{
 
 	.mediaWidth{
 		width: 480px;
-		margin: 0 auto;
+		/*margin: 0 auto;*/
+		overflow: hidden;
 	}
 	/*nav*/
 
@@ -1124,7 +1126,8 @@ footer{
 
 	.mediaWidth{
 		width: 768px;
-		margin: 0 auto;
+		/*margin: 0 auto;*/
+		overflow: hidden;
 	}
 
 	.hidden960{
@@ -1483,7 +1486,7 @@ footer{
 
 	.mediaWidth{
 		width: 960px;
-		
+		overflow: hidden;
 	}
 
 	/*head*/
