@@ -471,7 +471,7 @@ body > * {
 /*block2*/
 .contentBlock2 {
   width: 100%;
-  border-bottom: 1px solid #e6e6e6;
+  /*border-bottom: 1px solid #e6e6e6;*/
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -o-box-sizing: border-box;
@@ -1220,7 +1220,7 @@ body > * {
     width: 50%;
     margin: 0;
     float: left;
-    border-bottom: 1px solid #e6e6e6;
+    /*border-bottom: 1px solid #e6e6e6;*/
   }
   .contentBlock1 .block1Wrapper {
     width: 81%;
@@ -1581,6 +1581,8 @@ body > * {
   }
 
   /*content*/
+  
+
   .contentBlock1 .block1Wrapper {
     width: 89%;
     margin: 28px 2px 2px 25px;
@@ -1670,6 +1672,7 @@ body > * {
   .contentBlock2 .hidden960 {
     display: block;
   }
+
 
   /*block3*/
   .contentBlock3 {
@@ -1842,3 +1845,7 @@ body > * {
     display: block;
   }
 /*}*/
+
+.blocks1_2{
+    border-bottom: 1px solid #e6e6e6;
+  }
