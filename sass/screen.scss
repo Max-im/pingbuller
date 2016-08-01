@@ -10,10 +10,10 @@
     src: url(../fonts/League_Gothic.otf);
 }
 
-@font-face {
-    font-family: openSans;
-    src: url(../fonts/OpenSans-Regular.ttf);
-}
+/*@font-face {
+    font-family: OpenSans;;
+    src: url(../fonts/OpenSans;-Regular.ttf);
+}*/
 
 @font-face {
     font-family: miryad;
@@ -91,12 +91,12 @@ body>*{
 	overflow: hidden;
 }
 
-header{
+.header{
 	width: 100%;
 	/*height: 515px;*/
 	text-align: center;
 	/*position: relative;*/
-	background: url(../img/bg.jpg) top center;
+	background: url(../img/bg.jpg);
 	background-size: cover;
 	@include box;
 
@@ -109,7 +109,7 @@ header{
 
 	h2{
 		font-size: 48px;
-		font-family: gotic;
+		font-family: gotic, arial;
 		line-height: 33.72px;
 		color: #fff;
 		text-transform: uppercase;
@@ -147,7 +147,7 @@ header{
 	}
 
 .home{
-		font-size: 24px;
+		font-size: 20px;
 		font-family: gotic;
 		color: #fff;
 		line-height: 35px;
@@ -169,7 +169,7 @@ header{
 }
 
 	.menuCover:hover{
-		background: rgba(54,41,62,.9);
+		background: url(../img/menu1.png);
 		width: 144px;
 		border-bottom: 1px solid #36283e;
 		border-radius: 8px 8px 0 0;
@@ -186,7 +186,7 @@ header{
 	}
 
 	.subMenu>li a:hover{
-		background: rgba(43,34,49,.9);
+		background: url(../img/menu1.png);
 		border-bottom: 2px solid #edbfff;
 	}
 
@@ -196,7 +196,7 @@ header{
 		display: none;
 	}
 	.subMenu li{
-		background: rgba(54,41,62,.9);
+		background: url(../img/menu1.png);
 		border-top: 1px solid #523f5a;
 		border-bottom: 1px solid #36283e;
 		border-left: 1px solid #051116;
@@ -212,7 +212,7 @@ header{
 	.subMenu>li a{
 		width: 144px;
 		padding: 0px 51px 1px 49px;
-		font-size: 24px;
+		font-size: 16px;
 		
 		font-family: gotic;
 		color: #edbfff;
@@ -246,22 +246,19 @@ header{
 }
 .pointerNext{
 	color: #edbfff;
-	font-size:18px;
+	font-size:14px;
 	font-family: gotic;
 	line-height: 24px;
-	margin: 0 0 0 64px;
+	margin: 0 20px 0 64px;
 	letter-spacing: .1px;
 	text-align: left;
 	text-transform: uppercase;
-	@include textsh(0px, 2px, 2px, rgba(0,0,0,0.3));
 }
 
 .addP{
 	color: #fff;
-	font-size: 16px;
-	font-family: openSans;	
-	@include textsh(2px, 2px , 2px, rgba(0,0,0,.3));
-	/*display: block;*/
+	font-size: 12px;
+	font-family: OpenSans, arial;	
 	width: 280px;		
 	letter-spacing: -.5px;
 	 -moz-hyphens: auto;
@@ -282,7 +279,7 @@ header{
 	-ms-hyphens: auto;
 	/*display: block;*/
 
-	font-family: openSans;	
+	font-family: OpenSans;;	
 	@include textsh(2px, 2px , 2px, rgba(0,0,0,.3));
 }	
 
@@ -317,24 +314,19 @@ header{
 		width: 16px;
 		height: 16px;
 		margin: 0 2px 0 0;
-		background: rgba(0,0,0,.3);
+		background: url(../img/ping.png);
 		vertical-align: top;
-		@include bor-rad(50%);
-
+		
 	}
-	.spot:last-child{
+	.lastSpot{
 		margin: 0;
 	}
 	/*add or delete .hotSpot in DOM for changing */
-	.hotSpot::after{
-	content: '';
+	.hotSpot{
 	display: inline-block;
-	width: 8px;
-	height: 8px;
-	border: 1px solid #fff;
-	@include grad(#fff, #d4d4d4);
-	@include boxsh(0px, 0px, 5px, rgba(0,0,0,0.8));		
-	@include bor-rad(50%);	
+	width: 16px;
+	height: 16px;
+	background: url(../img/pong.png);
 	}
 }
 
@@ -352,8 +344,10 @@ header{
 	z-index: 20;
 	position: relative;
 	/*margin: 0 0 20px 0;*/
-	@include grad(#745083, #322539);
+	background: url(../img/aboutCompBg.jpg);
+	/*background-size: cover;*/
 	@include box;
+	
 	
 	
 }
@@ -382,7 +376,7 @@ header{
 
 	h3{
 		font-family: gotic;
-		font-size: 24px;
+		font-size: 20px;
 		text-transform: uppercase;
 		text-align: left;
 		margin: 0 0 3px 72px;
@@ -390,7 +384,7 @@ header{
 		@include textsh(1px, 1px, 0px, #0f1518);		
 	}
 	p{
-		font-family: openSans;
+		font-family: OpenSans, tahoma;
 		font-size: 16px;
 		line-height: 24px;
 		text-align: left;
@@ -401,7 +395,7 @@ header{
 	}
 	a{
 		font-size: 18px;
-		font-family: gotic;
+		font-family: gotic, arial;
 		line-height: 24px;
 		margin: 0 0 0 0;
 		color: #fff;
@@ -409,25 +403,12 @@ header{
 	}
 
 	a:hover{
-		@include textsh( 0, 0, 8px, rgba(255,255,255,.8) );
+		font-size: 19px;
 	}
 }
 .correct2{
 	margin: 14px 0 0 0;
 }
-
-.aboutComp::after{
-	content: '';
-	display: block;
-	width: 100%;
-	height: 1px;
-	background: #fff;
-	position: absolute;
-	bottom: -3px;
-	left: 0px;
-	@include boxsh( 0, 5px, 8px, rgba(0,0,0,.5));
-}
-
 
 
 
@@ -453,7 +434,6 @@ header{
 	padding: 23px 38px 27px 35px;
 	position: relative;
 	@include box;
-	@include boxsh(0, 0, 2px, rgba(0,0,0,.05));
 	
 	.photo{
 		width: 49px;
@@ -481,7 +461,7 @@ header{
 	}
 	p{
 		font-size: 16px;
-		font-family: openSans;
+		font-family: OpenSans, tahoma;
 		font-weight: light;
 		color: #454545;
 		padding: 0 0 0 2px;
@@ -489,9 +469,7 @@ header{
 		letter-spacing: -.5px;
 		word-wrap: break-word;
 	}
-	p::after{
-		content: 'turpis neque, feu- giat eget eleifend et, lacinia non neque. Prae- sent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi conval- lis auctor. Nam vitae'
-	}
+	
 }
 
 /*spotOverride*/
@@ -501,16 +479,15 @@ header{
 	margin: 23px 0 0 44px;		
 
 	.spot{
-		width: 15px;
-		height: 15px;
-		border: 1px solid #e6e6e6;
-		background: #fff;
+		width: 17px;
+		height: 17px;
+		/*border: 1px solid #e6e6e6;*/
+		background: url(../img/ping2.png);
 		margin: 0 0 0 0;
 	}
 
-	.hotSpot::after{
-		border: 1px solid #454545;
-		@include grad(#6a6a6a, #454545);
+	.hotSpot{
+		background: url(../img/pong2.png);
 	}
 }
 
@@ -530,7 +507,9 @@ header{
 		text-align: left;
 		margin: 50px 0 14px 17px;
 	}
-	article{
+	.art1,
+	.art2,
+	.art3{
 		margin: 0 0 19px 0;
 		width: 100%;
 		position: relative;
@@ -538,7 +517,7 @@ header{
 	}
 
 	p{
-		font-family: openSans;
+		font-family: OpenSans;;
 		font-size: 16px;
 		font-weight: 200;
 		color: #454545;
@@ -566,8 +545,7 @@ header{
 .block2img{
 	height: 49px;
 	width: 49px;
-	@include bor-rad(50%);
-	@include boxsh( inset 0, 0, 5px, rgba(0,0,0,.4));				
+			
 }
 .block2img1{
 	position: absolute;
@@ -598,9 +576,9 @@ header{
 	top: -1px;
 }
 
-.contentBlock2::after{
-	content: '';
-	display: block;
+
+
+.clear{
 	clear: both;
 }
 
@@ -694,13 +672,6 @@ header{
 }
 
 
-.contentBlock3::after{
-	content: '';
-	display: block;
-	clear: both;
-}
-
-
 
 /*additionalBlock*/
 
@@ -727,7 +698,7 @@ header{
 			@include textsh(1px, 1px, 0px, #fff);
 		}
 		p{
-			font-family: openSans;
+			font-family: OpenSans;;
 			color: #787878;
 			font-size: 16px;
 			font-weight: 300;
@@ -755,7 +726,7 @@ header{
 
 /*footer*/
 
-footer{
+.footer{
 	width: 100%;
 	height: 201px;
 	background: url(../img/footerBG.jpg) center;
@@ -765,7 +736,7 @@ footer{
 	@include box;
 	z-index: 3;
 	p{
-		font-family: openSans;
+		font-family: OpenSans;;
 		font-size: 12px;
 		color: #fff;
 		font-weight: 300;
@@ -821,19 +792,6 @@ footer{
 }
 
 }
-	footer::after{
-		content: '';
-		display: block;
-		width: 100%;
-		height: 1px;
-		position: absolute;
-		top: 0px;
-		left: 0px;
-		@include boxsh( 0, 5px, 8px, rgba(0,0,0,1));
-
-		
-	}
-
 
 
 
@@ -847,7 +805,7 @@ footer{
 
 /*480*/
 
-@media screen and (min-width: 480px) {
+@media all and (min-width: 480px) {
 
 	.wrapper{
 		width: 100%;
@@ -858,10 +816,11 @@ footer{
 		width: 480px;
 		/*margin: 0 auto;*/
 		overflow: hidden;
+
 	}
 	/*nav*/
 
-	nav .menuCover{
+	.nav .menuCover{
 		background: rgba(54,41,62,.9);
 		width: 144px;
 		z-index: 5;
@@ -900,11 +859,11 @@ footer{
 			left: -1px;
 		}
 	}
-	header .mediaWidth::after{
+	.header .mediaWidth::after{
 		content: "";
 		width: 192px;
 		height: 304px;
-		background: url(../img/phone.png);
+		background: url(../img/phone.jpg);
 		display: block;
 		position: absolute;
 		right: 32px;
@@ -912,7 +871,7 @@ footer{
 		z-index: 0;
 	}
 
-	header::before{
+	.header::before{
 		content: "";
 		width: 100%;
 		height: 246px;
@@ -937,7 +896,7 @@ footer{
 	}
 
 
-	header .slider{
+	.header .slider{
 		padding: 0 0 60px 0 ;
 	}
 
@@ -1003,7 +962,9 @@ footer{
 			margin: 50px 0 15px 17px;
 			letter-spacing: -.2px;
 		}
-		article{
+		.art1,
+		.art2,
+		.art3{
 			margin: 0 0 19px 0;
 			width: 100%;
 			position: relative;
@@ -1094,7 +1055,7 @@ footer{
 	}
 
 	/*footer*/
-	footer{
+	.footer{
 		p{
 			padding: 37px 3px 0 0;
 		}
@@ -1119,9 +1080,10 @@ footer{
 /*media 768*/
 
 
-@media screen and (min-width: 768px){
+@media all and (min-width: 768px){
 	.wrapper{
 		width: 100%;
+
 	}
 
 	.mediaWidth{
@@ -1134,7 +1096,7 @@ footer{
 		display: none;
 	}
 	/*head*/
-	header{
+	.header{
 	text-align: center;
 		
 		.slider{
@@ -1180,7 +1142,7 @@ footer{
 			display: inline;
 		}
 	
-		nav>ul{
+		.nav>ul{
 			margin: 7px 0 0 21px;
 			float: left;
 		}
@@ -1219,11 +1181,11 @@ footer{
 		    margin: 149px 0 32px 397px;
 		}
 	}
-		header .mediaWidth::after{
+		.header .mediaWidth::after{
 			content: "";
 			width: 274px;
 			height: 434px;
-			background: url(../img/phone768.png);
+			background: url(../img/phone768.jpg);
 			display: block;
 			position: absolute;
 			right: 48px;
@@ -1231,7 +1193,7 @@ footer{
 			z-index: 0;
 		}
 
-		header::before{
+		.header::before{
 			content: "";
 			width: 100%;
 			height: 400px;
@@ -1424,7 +1386,7 @@ footer{
 
 /*footer*/
 
-	footer{
+	.footer{
 		padding: 45px 20px 0 18px;
 
 		
@@ -1487,10 +1449,11 @@ footer{
 	.mediaWidth{
 		width: 960px;
 		overflow: hidden;
+
 	}
 
 	/*head*/
-	header{
+	.header{
 		
 		.slider{
 			width: 960px;
@@ -1510,7 +1473,7 @@ footer{
 
 		/*MENU*/
 
-		nav{
+		.nav{
 			float: right;
 			margin: 63px 0px 0 0;
 			.menuCover .home{
@@ -1570,7 +1533,7 @@ footer{
 		.addP{
 			width: 520px;		
 			font-size: 18px;
-			font-family: openSans;
+			font-family: OpenSans;;
 			letter-spacing: -.7px;
 			 -moz-hyphens: auto;
 			-webkit-hyphens: auto;
@@ -1586,7 +1549,7 @@ footer{
 			content: "tibulum sit amet sapien. Nunc dignissim tincidunt est, et auctor turpis ornare a. Nam venenatis hendrerit est at volutpat. Morbi elementum euismod lacus id semper. In odio nunc, imperdiet eget aliquam quis, euismod id lectus. Nulla interdum arcu et felis aliquam a tempus lectus lobortis.";
 			width: 520px;		
 			font-size: 18px;
-			font-family: openSans;
+			font-family: OpenSans;;
 			letter-spacing: -.7px;
 			 -moz-hyphens: auto;
 			-webkit-hyphens: auto;
@@ -1609,12 +1572,12 @@ footer{
 		}
 	}
 
-	header .mediaWidth::after{
+	.header .mediaWidth::after{
 		right: 70px;
 		top: 261px;
 	}
 
-	header::before{
+	.header::before{
 		top: 278px;
 		z-index: 0;
 	}
@@ -1664,10 +1627,10 @@ footer{
 			a{
 				margin: 0 14px 0 0;
 			}
-			.icon2{
+			.jpgn2{
 				width: 27px;
 				height: 23px;
-				background: url(../img/contIcon2.png) no-repeat center;
+				background: url(../img/contIcon2.jpg) no-repeat center;
 				/*background-position: -1px 1px;*/
 			}
 			.wrenchImg{
@@ -1685,10 +1648,10 @@ footer{
 			p{
 				margin: 7px 0 0px 98px;
 			}
-			.icon3{
+			.jpgn3{
 				width: 23px;
 				height: 25px;
-				background: url(../img/contIcon3.png) no-repeat center;
+				background: url(../img/contIcon3.jpg) no-repeat center;
 				/*background-position: -1px 1px;*/
 			}
 			.wrenchImg{
@@ -1753,7 +1716,9 @@ footer{
 			margin: 49px 0 14px 18px;
 			letter-spacing: 0px;
 		}
-		article{
+		.art1,
+		.art2,
+		.art3{
 			margin: 0 0 18px 0;
 
 			.bold{
@@ -1866,7 +1831,7 @@ footer{
 			}
 		}
 		.wrap .extraLight{
-			font-family: Georgia;
+			font-family: Georgia;;
 			font-size: 16px;
 			font-style: italic;
 			color: #c5c5c5;
@@ -1914,7 +1879,7 @@ footer{
 
 	/*footer*/
 
-	footer{
+	.footer{
 	height: 113px;
 	padding: 47px 0 0 0;
 		p{
