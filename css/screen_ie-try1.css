@@ -1,3 +1,5 @@
+
+
 /* Welcome to Compass.
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
@@ -58,18 +60,38 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
+
+
 @font-face {
-  font-family: gotic;
-  src: url(../fonts/League_Gothic.otf);
+    font-family: "gotic";
+    src: url("../fonts/LeagueGothicRegular.eot");
+    src: url("../fonts/LeagueGothicRegular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/LeagueGothicRegular.woff") format("woff"),
+    url("../fonts/LeagueGothicRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
 }
+
+@font-face {
+    font-family: "openSans";
+    src: url("../fonts/opensans-regular-webfont.eot");
+    src: url("../fonts/opensans-regular-webfont.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/opensans-regular-webfont.woff") format("woff"),
+    url("../fonts/opensans-regular-webfont.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+
 /*@font-face {
-    font-family: OpenSans;;
-    src: url(../fonts/OpenSans;-Regular.ttf);
-}*/
-@font-face {
-  font-family: miryad;
-  src: url(../fonts/MyriadPro-Regular.otf);
+    font-family: "miryad";
+    src: url("../fonts/myriadpro-regular-webfont.eot");
+    src: url("../fonts/myriadpro-regular-webfont.eot?#iefix") format("embedded-opentype");
+    font-style: normal;
+    font-weight: normal;
 }
+*/
+
 /*mixins*/
 * {
   text-decoration: none;
@@ -118,7 +140,7 @@ body > * {
 }
 .header h2 {
   font-size: 48px;
-  font-family: gotic, arial;
+  font-family: gotic;
   line-height: 33.72px;
   color: #fff;
   text-transform: uppercase;
@@ -150,7 +172,7 @@ body > * {
   border-top: 1px solid transparent;
 }
 .header .home {
-  font-size: 20px;
+  font-size: 24px;
   font-family: gotic;
   color: #fff;
   line-height: 35px;
@@ -203,7 +225,7 @@ body > * {
 .header .subMenu > li a {
   width: 144px;
   padding: 0px 51px 1px 49px;
-  font-size: 16px;
+  font-size: 24px;
   font-family: gotic;
   color: #edbfff;
   line-height: 38px;
@@ -282,6 +304,7 @@ body > * {
 .sliderSpots {
   margin: 76px 0 0 7px;
   height: 17px;
+  border: none;
   /*add or delete .hotSpot in DOM for changing */
 }
 .sliderSpots .spot {
@@ -461,6 +484,7 @@ body > * {
   width: 17px;
   height: 17px;
   /*border: 1px solid #e6e6e6;*/
+  border: 0px solid #fff;
   background: url(../img/ping2.png);
   margin: 0 0 0 0;
 }
@@ -925,12 +949,14 @@ body > * {
   /*spotOverride*/
   .spotOverride {
     margin: 22px 0 0 10px;
+
   }
 
   /*block2*/
   .contentBlock2 {
     width: 100%;
     margin: 0 auto;
+    border: 0px solid #fff;
   }
   .contentBlock2 h3 {
     margin: 50px 0 15px 17px;
@@ -1849,3 +1875,35 @@ body > * {
 .blocks1_2{
     border-bottom: 1px solid #e6e6e6;
   }
+
+
+.IEdel{
+  display: none !important;
+}
+
+.forIE{
+  display: block;
+ }
+
+ .slider .IEpointerNext{
+   color: #edbfff;
+  font-family: gotic;
+  line-height: 24px;
+  letter-spacing: .1px;
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 24px;
+  letter-spacing: .3px;
+ }
+
+
+ .IEaddP{
+  color: #fff;
+  font-size: 12px;
+  font-family: OpenSans;
+  width: 380px;
+  letter-spacing: -.5px;
+  margin: 0px 0 0 0px;
+  line-height: 25px;
+ }
+
