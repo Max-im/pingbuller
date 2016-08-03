@@ -1247,6 +1247,7 @@ body > * {
     margin: 0;
     float: left;
     /*border-bottom: 1px solid #e6e6e6;*/
+    border-bottom: 0px solid #fff;
   }
   .contentBlock1 .block1Wrapper {
     width: 81%;
